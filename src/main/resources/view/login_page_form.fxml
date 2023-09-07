@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginPageFormController">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="900.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assets/image/abstract-smooth-empty-grey-studio-well-use-as-background-business-report-digital-website-template-backdrop.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="400.0" fitWidth="543.0" layoutX="7.0" layoutY="150.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assets/image/Capture.PNG" />
+         </image>
+      </ImageView>
+      <Label layoutX="451.0" layoutY="14.0" opacity="0.44" text="Login Form" textFill="#a45d5d">
+         <font>
+            <Font name="System Bold" size="80.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3e8e7e" height="394.0" layoutX="575.0" layoutY="153.0" opacity="0.3" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="308.0" />
+      <JFXTextField fx:id="txtuserName" focusColor="BLACK" layoutX="603.0" layoutY="229.0" onAction="#txtUserNameOnAction" promptText="User Name" unFocusColor="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="txtPassword" focusColor="BLACK" layoutX="604.0" layoutY="302.0" onAction="#txtPasswordOnAction" promptText="Password" unFocusColor="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXButton fx:id="btnLogin" layoutX="605.0" layoutY="380.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#btnLoginOnAction" opacity="0.6" prefHeight="44.0" prefWidth="237.0" style="-fx-background-color: #2D2424;" text="Login" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="665.0" layoutY="459.0" text="Create an Account" />
+      <JFXButton fx:id="btnRegister" layoutX="605.0" layoutY="491.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#btnRegisterOnAction" opacity="0.6" prefHeight="44.0" prefWidth="237.0" style="-fx-background-color: #2D2424;" text="Register" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="29.0" fitWidth="27.0" layoutX="796.0" layoutY="241.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assets/image/icons8-username.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="29.0" fitWidth="27.0" layoutX="797.0" layoutY="310.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assets/image/icons8-password.gif" />
+         </image>
+      </ImageView>
+      <RadioButton layoutX="603.0" layoutY="429.0" mnemonicParsing="false" text="Show password" />
+      <Label layoutX="764.0" layoutY="430.0" prefHeight="16.0" prefWidth="110.0" />
+   </children>
+</AnchorPane>

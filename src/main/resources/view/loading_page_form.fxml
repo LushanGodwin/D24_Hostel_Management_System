@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoadingPageFormController">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="900.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assets/image/abstract-smooth-empty-grey-studio-well-use-as-background-business-report-digital-website-template-backdrop.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="247.0" fitWidth="294.0" layoutX="295.0" layoutY="171.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assets/image/15.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="185.0" layoutY="22.0" opacity="0.6" text="D24 Hostel" textFill="#35155d">
+         <font>
+            <Font name="System Bold" size="100.0" />
+         </font>
+      </Label>
+      <Label layoutX="170.0" layoutY="421.0" opacity="0.37" text="Management" textFill="#fd8d14">
+         <font>
+            <Font name="System Bold" size="90.0" />
+         </font>
+      </Label>
+      <Label layoutX="277.0" layoutY="509.0" opacity="0.37" text="System" textFill="#fd8d14">
+         <font>
+            <Font name="System Bold" size="90.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="progressBar" layoutX="128.0" layoutY="658.0" prefHeight="23.0" prefWidth="666.0" progress="0.0" />
+   </children>
+</AnchorPane>
