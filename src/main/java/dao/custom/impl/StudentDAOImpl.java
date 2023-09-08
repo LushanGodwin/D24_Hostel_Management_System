@@ -93,4 +93,19 @@ public class StudentDAOImpl implements StudentDAO {
     }
 
 
+    @Override
+    public List<Student> getUnpaidStudents() {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        NativeQuery nativeQuery = session.createNativeQuery("SELECT DISTINCT s.student_id,s.name,s.address,s.contact_no,s.date,s.gender FROM student s JOIN reservation r on s.student_id = r.student_student_id WHERE r.status='un-paid'");
+        nativeQuery.addEntity(Student.class);
+        List<Student> customers = nativeQuery.list();
+
+
+        transaction.commit();
+        session.close();
+
+        return customers;
+    }
 }

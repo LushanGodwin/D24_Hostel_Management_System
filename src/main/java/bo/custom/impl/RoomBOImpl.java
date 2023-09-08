@@ -1,15 +1,10 @@
 package bo.custom.impl;
 
 import bo.custom.RoomBO;
-
 import dao.DAOFactory;
 import dao.custom.RoomDAO;
 import dto.RoomDTO;
-
-import dto.StudentDTO;
 import entity.Room;
-import entity.Student;
-
 
 import java.util.ArrayList;
 import java.util.List;

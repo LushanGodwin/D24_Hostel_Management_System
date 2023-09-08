@@ -48,4 +48,25 @@ public class StudentBOImpl implements StudentBO {
         Student student = studentDAO.search(studentId);
         return new StudentDTO(student.getStudent_id(),student.getName(),student.getAddress(),student.getContact_no(),student.getDate(),student.getGender());
     }
+
+    @Override
+    public List<StudentDTO> getUnpaidStudents() {
+        List<Student> students = studentDAO.getUnpaidStudents();
+        List<StudentDTO> studentDTOS = new ArrayList<>();
+
+        for (Student student : students) {
+
+            StudentDTO studentDTO = new StudentDTO();
+            studentDTO.setStudent_id(student.getStudent_id());
+            studentDTO.setName(student.getName());
+            studentDTO.setAddress(student.getAddress());
+            studentDTO.setContact_no(student.getContact_no());
+            studentDTO.setGender(student.getGender());
+            studentDTO.setDate(student.getDate());
+
+            studentDTOS.add(studentDTO);
+        }
+
+        return studentDTOS;
+    }
 }

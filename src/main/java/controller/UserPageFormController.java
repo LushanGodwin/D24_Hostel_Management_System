@@ -4,7 +4,6 @@ import bo.BOFactory;
 import bo.custom.UserBO;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
-import dto.StudentDTO;
 import dto.UserDTO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -16,7 +15,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
-import tm.StudentTM;
 import tm.UserTM;
 
 import java.net.URL;

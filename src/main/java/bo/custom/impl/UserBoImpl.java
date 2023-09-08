@@ -3,9 +3,7 @@ package bo.custom.impl;
 import bo.custom.UserBO;
 import dao.DAOFactory;
 import dao.custom.UserDAO;
-import dto.StudentDTO;
 import dto.UserDTO;
-import entity.Student;
 import entity.User;
 
 import java.util.ArrayList;

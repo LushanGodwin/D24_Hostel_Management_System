@@ -18,4 +18,5 @@ public interface RoomBO extends SuperBO {
 
 
     boolean deleteRoom(String roomId);
+
 }

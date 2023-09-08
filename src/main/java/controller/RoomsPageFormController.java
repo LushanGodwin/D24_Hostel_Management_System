@@ -5,8 +5,6 @@ import bo.custom.RoomBO;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import dto.RoomDTO;
-import dto.StudentDTO;
-import entity.Room;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -19,10 +17,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import tm.RoomTM;
-import tm.StudentTM;
 
 import java.net.URL;
-import java.sql.Date;
 import java.util.List;
 import java.util.ResourceBundle;
 

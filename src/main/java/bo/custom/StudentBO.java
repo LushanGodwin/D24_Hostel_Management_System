@@ -17,4 +17,6 @@ public interface StudentBO extends SuperBO {
     String generatenextStudentId();
 
     StudentDTO searchStudent(String studentId);
+
+    List<StudentDTO> getUnpaidStudents();
 }

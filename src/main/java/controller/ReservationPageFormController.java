@@ -1,6 +1,7 @@
 package controller;
 
 import bo.BOFactory;
+import bo.custom.ReservationBO;
 import bo.custom.RoomBO;
 import com.jfoenix.controls.JFXButton;
 import dto.ReservationDTO;
