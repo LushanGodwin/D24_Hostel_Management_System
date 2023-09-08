@@ -41,17 +41,38 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public List<User> getAll() {
-        return null;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        List<User> userArrayList = session.createNativeQuery("SELECT * FROM User").addEntity(User.class).list();
+
+        transaction.commit();
+        session.close();
+        return userArrayList;
     }
 
     @Override
     public boolean update(User student) {
-        return false;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        session.update(student);
+        transaction.commit();
+        session.close();
+
+        return true;
     }
 
     @Override
     public boolean delete(User entity) {
-        return false;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        session.remove(entity);
+        transaction.commit();
+        session.close();
+
+        return true;
     }
 
     @Override
