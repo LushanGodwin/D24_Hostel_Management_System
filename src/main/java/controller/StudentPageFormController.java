@@ -90,6 +90,7 @@ public class StudentPageFormController implements Initializable {
     }
 
     private void getAll() {
+
     }
 
     @FXML
