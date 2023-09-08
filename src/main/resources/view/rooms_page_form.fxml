@@ -17,7 +17,7 @@
             <Font name="System Bold" size="45.0" />
          </font>
       </Label>
-      <JFXTextField focusColor="BLACK" layoutX="623.0" layoutY="25.0" opacity="0.8" promptText="Search Bar" style="-fx-background-color: FF9EAA; -fx-background-radius: 5px;" unFocusColor="WHITE">
+      <JFXTextField fx:id="txtSearch" focusColor="BLACK" layoutX="623.0" layoutY="25.0" onAction="#txtSearchOnAction" opacity="0.8" promptText="Search Bar" style="-fx-background-color: FF9EAA; -fx-background-radius: 5px;" unFocusColor="WHITE">
          <font>
             <Font size="20.0" />
          </font>
@@ -28,7 +28,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <TextField layoutX="157.0" layoutY="108.0" promptText="ID">
+      <TextField fx:id="txtRoomId" layoutX="157.0" layoutY="108.0" promptText="ID">
          <font>
             <Font size="17.0" />
          </font>
@@ -38,7 +38,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <TextField layoutX="157.0" layoutY="168.0" promptText="ID">
+      <TextField fx:id="txtType" layoutX="157.0" layoutY="168.0" promptText="ID">
          <font>
             <Font size="17.0" />
          </font>
@@ -48,7 +48,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <TextField layoutX="586.0" layoutY="103.0" promptText="ID">
+      <TextField fx:id="txtKeyMoney" layoutX="586.0" layoutY="103.0" promptText="ID">
          <font>
             <Font size="17.0" />
          </font>
@@ -58,28 +58,33 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <TextField layoutX="586.0" layoutY="165.0" promptText="3">
+      <TextField fx:id="txtQty" layoutX="586.0" layoutY="165.0" promptText="3">
          <font>
             <Font size="17.0" />
          </font>
       </TextField>
-      <JFXButton layoutX="491.0" layoutY="258.0" opacity="0.25" style="-fx-background-color: #0E2954; -fx-background-radius: 10px;" text="Save" textFill="WHITE">
+      <JFXButton fx:id="btnSave" layoutX="491.0" layoutY="258.0" onAction="#btnSaveOnAction" opacity="0.25" style="-fx-background-color: #0E2954; -fx-background-radius: 10px;" text="Save" textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="631.0" layoutY="258.0" opacity="0.75" style="-fx-background-color: #0E2954; -fx-background-radius: 10px;" text="Delete" textFill="WHITE">
+      <JFXButton fx:id="btnDelete" layoutX="707.0" layoutY="258.0" onAction="#btnDeleteOnAction" opacity="0.75" style="-fx-background-color: #0E2954; -fx-background-radius: 10px;" text="Delete" textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </JFXButton>
-      <TableView layoutX="114.0" layoutY="338.0" prefHeight="200.0" prefWidth="633.0">
+      <TableView fx:id="tblRoom" layoutX="114.0" layoutY="338.0" onMouseClicked="#roomTblOnMouseClicked" prefHeight="200.0" prefWidth="633.0">
         <columns>
-          <TableColumn prefWidth="112.0" text="Room_id" />
-          <TableColumn prefWidth="155.0" text="Type" />
-            <TableColumn prefWidth="218.0" text="Key Money" />
-            <TableColumn prefWidth="147.0" text="Qty" />
+          <TableColumn fx:id="colRoomId" prefWidth="112.0" text="Room_id" />
+          <TableColumn fx:id="colType" prefWidth="155.0" text="Type" />
+            <TableColumn fx:id="colKeyMoney" prefWidth="218.0" text="Key Money" />
+            <TableColumn fx:id="colQty" prefWidth="147.0" text="Qty" />
         </columns>
       </TableView>
+      <JFXButton fx:id="updateBtn" layoutX="588.0" layoutY="257.0" onAction="#updateBtnOnAction" opacity="0.5" style="-fx-background-color: #0E2954; -fx-background-radius: 10px;" text="Update" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>
