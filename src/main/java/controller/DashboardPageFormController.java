@@ -36,8 +36,10 @@ public class DashboardPageFormController {
 
     }
 
-    public void btnUserOnAction(ActionEvent actionEvent) {
-
+    public void btnUserOnAction(ActionEvent actionEvent) throws IOException {
+        AnchorPane load= FXMLLoader.load(getClass().getResource("/view/user_page_form.fxml"));
+        root.getChildren().clear();
+        root.getChildren().add(load);
     }
 
     public void btnReservationOnAction(ActionEvent actionEvent) throws IOException {
