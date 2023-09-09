@@ -33,7 +33,7 @@ public class DashboardPageFormController {
     }
 
     public void btnLogoutOnAction(ActionEvent actionEvent) {
-
+        System.exit(0);
     }
 
     public void btnUserOnAction(ActionEvent actionEvent) throws IOException {
