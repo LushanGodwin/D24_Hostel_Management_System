@@ -28,6 +28,11 @@ public class LoginPageFormController {
     @FXML
     private JFXButton btnRegister;
 
+
+    @FXML
+    private JFXTextField txtShowPassword;
+    boolean showPassword = false;
+
     @FXML
     private AnchorPane root;
 
@@ -35,7 +40,7 @@ public class LoginPageFormController {
 
     @FXML
     void btnRegisterOnAction(ActionEvent event) throws IOException {
-        AnchorPane load= FXMLLoader.load(getClass().getResource("/view/register_page_form.fxml"));
+        AnchorPane load = FXMLLoader.load(getClass().getResource("/view/register_page_form.fxml"));
         root.getChildren().clear();
         root.getChildren().add(load);
     }
@@ -46,8 +51,8 @@ public class LoginPageFormController {
         String userName = txtuserName.getText();
         String password = txtPassword.getText();
 
-        boolean isValid = userBO.checkUser(userName,password);
-        if (isValid){
+        boolean isValid = userBO.checkUser(userName, password);
+        if (isValid) {
             AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/view/dashboard_page_form.fxml"));
             Stage stage = new Stage();
             stage.setScene(new Scene(anchorPane));
@@ -56,7 +61,7 @@ public class LoginPageFormController {
             stage.setTitle("D24 Hostel Management System - Dashboard");
             stage.centerOnScreen();
             stage.show();
-        }else{
+        } else {
             new Alert(Alert.AlertType.ERROR, "Username and Password incorrect!...").show();
         }
     }
@@ -68,4 +73,24 @@ public class LoginPageFormController {
     public void txtPasswordOnAction(ActionEvent actionEvent) {
         btnLogin.fire();
     }
+
+    @FXML
+    void btnShowPassword(ActionEvent event) {
+
+        if (!showPassword) {
+
+            String password = txtPassword.getText();
+            txtShowPassword.setText(password);
+
+            txtPassword.setVisible(false);
+            txtShowPassword.setVisible(true);
+            showPassword = true;
+        } else {
+            txtPassword.setVisible(true);
+            txtShowPassword.setVisible(false);
+            showPassword=false;
+        }
+
+    }
+
 }

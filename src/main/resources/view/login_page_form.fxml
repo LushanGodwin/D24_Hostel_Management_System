@@ -34,7 +34,7 @@
             <Font size="20.0" />
          </font>
       </JFXTextField>
-      <JFXPasswordField fx:id="txtPassword" focusColor="BLACK" layoutX="604.0" layoutY="302.0" onAction="#txtPasswordOnAction" promptText="Password" unFocusColor="WHITE">
+      <JFXPasswordField fx:id="txtPassword" focusColor="BLACK" layoutX="603.0" layoutY="303.0" onAction="#txtPasswordOnAction" promptText="Password" unFocusColor="WHITE">
          <font>
             <Font size="20.0" />
          </font>
@@ -60,7 +60,12 @@
             <Image url="@../assets/image/icons8-password.gif" />
          </image>
       </ImageView>
-      <RadioButton layoutX="603.0" layoutY="429.0" mnemonicParsing="false" text="Show password" />
+      <RadioButton layoutX="603.0" layoutY="351.0" mnemonicParsing="false" onAction="#btnShowPassword" text="Show password" />
       <Label layoutX="764.0" layoutY="430.0" prefHeight="16.0" prefWidth="110.0" />
+      <JFXTextField fx:id="txtShowPassword" focusColor="BLACK" layoutX="603.0" layoutY="303.0" promptText="Password" unFocusColor="WHITE" visible="false">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
    </children>
 </AnchorPane>
